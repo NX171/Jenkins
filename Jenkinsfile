@@ -7,11 +7,16 @@ pipeline {
     stages {
         stage("Building") {
             steps {
-                input message: 'Proceed with build?'
-
                 script {
                     // This is a comment
                     echo "Building"
+                }
+            }
+        stage("Testing") {
+            steps {
+                script {
+                    // This is a comment
+                    echo "Testing"
                 }
             }
         }
