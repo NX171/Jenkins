@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stage("Building") {
-            steps {
+            script {
                 echo "Welcome"
             }
         }
