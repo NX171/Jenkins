@@ -4,7 +4,7 @@ pipeline {
         skipDefaultCheckout()
     }
     stages {
-        "Building": {
+        stage("Building") {
             steps {
                 echo "Welcome"
             }
