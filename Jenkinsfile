@@ -5,7 +5,7 @@ pipeline {
     }
 
     stages {
-        parallels {
+        parallel {
             stage("Building") {
                 steps {
                     script {
