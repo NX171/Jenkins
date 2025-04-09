@@ -5,7 +5,7 @@ pipeline {
     }
 
     parameters {
-        booleanParam(name: 'RUN_PARALLEL', defaultValue: true, description: 'Run parallel stages?')
+        booleanParam(name: 'RUN_PARALLEL', defaultValue: false, description: 'Run parallel stages?')
     }
 
     stages {
