@@ -5,20 +5,22 @@ pipeline {
     }
 
     stages {
-        parallel {
-            stage("Building") {
-                steps {
-                    script {
-                        // This is a comment
-                        echo "Building"
+        stage("Parallel Stages") {
+            parallel {
+                stage("Building") {
+                    steps {
+                        script {
+                            // This is a comment
+                            echo "Building"
+                        }
                     }
                 }
-            }
-            stage("Testing") {
-                steps {
-                    script {
-                        // This is a comment
-                        echo "Testing"
+                stage("Testing") {
+                    steps {
+                        script {
+                            // This is a comment
+                            echo "Testing"
+                        }
                     }
                 }
             }
