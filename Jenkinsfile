@@ -4,7 +4,7 @@ pipeline {
         skipDefaultCheckout()
     }
 
-    stages {
+    parralels {
         stage("Building") {
             steps {
                 script {
