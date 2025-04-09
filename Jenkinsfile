@@ -11,7 +11,8 @@ pipeline {
                     // This is a comment
                     echo "Building"
                 }
-            },
+            }
+        }
         stage("Testing") {
             steps {
                 script {
