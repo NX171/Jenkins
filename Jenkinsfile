@@ -4,8 +4,15 @@ pipeline {
         skipDefaultCheckout()
     }
 
+    parameters {
+        booleanParam(name: 'RUN_PARALLEL', defaultValue: true, description: 'Run parallel stages?')
+    }
+
     stages {
         stage("Parallel Stages") {
+            when {
+                expression { params.RUN_PARALLEL }
+            }
             parallel {
                 stage("Building") {
                     steps {
